@@ -1,0 +1,21 @@
+diff --git a/init/Kconfig b/init/Kconfig
+index c7900e897..9c292acb2 100644
+--- a/init/Kconfig
++++ b/init/Kconfig
+@@ -1402,12 +1402,15 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+ 	  helpful compile-time warnings.
+ 
+ config CC_OPTIMIZE_FOR_PERFORMANCE_O3
+-	bool "Optimize more for performance (-O3)"
++	bool "Optimize more for performance (-O3) (EXPERIMENTAL)"
+ 	depends on ARC
+ 	help
+ 	  Choosing this option will pass "-O3" to your compiler to optimize
+ 	  the kernel yet more for performance.
+ 
++	  This option is EXPERIMENTAL; you may encounter compiler bugs and/or
++	  kernel bugs with this option enabled.
++
+ config CC_OPTIMIZE_FOR_SIZE
+ 	bool "Optimize for size (-Os)"
+ 	help
